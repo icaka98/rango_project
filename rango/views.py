@@ -12,4 +12,8 @@ def index(request):
 
 
 def about(request):
-    return HttpResponse('About page <a href=\'/rango/\'>Go to Main page</a>')
+    context = {
+        'myname': 'Jesus'
+    }
+
+    return render(request, 'rango/about.html', context=context)
